@@ -1,13 +1,8 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm bg-light shadow p-3 mx-2 mb-3 rounded">
-        One of three columns
-      </div>
-      <div class="col-sm bg-light shadow p-3 mx-2 mb-3 rounded">
-        One of three columns
-      </div>
-      <div class="col-sm bg-light shadow p-3 mx-2 mb-3 rounded">
-        One of three columns
-      </div>
-    </div>
+  <div *ngFor="let content of githubData_sorted; let i = index" [attr.data-index]="i">
+    <div class="col-sm bg-light shadow p-3 mx-2 mb-3 rounded">
+      Repository: {{ content.name }}<BR>
+      Language: {{ content.language }} <BR>
+    </div>    
   </div>
+</div>
