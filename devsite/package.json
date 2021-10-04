@@ -21,6 +21,7 @@
     "bootstrap": "^5.1.1",
     "markdown": "^0.5.0",
     "markdown-to-html-pipe": "^1.2.5",
+    "ng-animate": "^1.0.0",
     "ng-showdown": "^1.1.0",
     "ngx-markdown": "^12.0.1",
     "rxjs": "~6.6.0",

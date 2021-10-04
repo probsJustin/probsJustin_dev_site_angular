@@ -1,4 +1,4 @@
-<div class="p-2 flex-fill">
+<div [@fadeIn]="fadeIn" class="p-2 flex-fill">
     <div class="container-fluid">
         <div class="col bg-light shadow p-3 mx-2 mb-3 rounded">
             <div class="fs-2">
@@ -7,7 +7,7 @@
         </div>
    
         <div class="col-sm bg-light shadow-lg p-3 mx-2 mb-4 rounded">
-            <div class="fs-4 p-2 mb-3 ">
+            <div class="fs-6 p-4 mb-3 ">
                Github: {{ configData["contact-information"]["github"] }} <BR>
                Email: {{ configData["contact-information"]["email"] }} <BR>
                 Discord: {{ configData["contact-information"]["discord"] }} <BR>

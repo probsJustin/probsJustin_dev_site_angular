@@ -8,7 +8,6 @@ import * as data from '../config.json';
   styleUrls: ['./navigation-bar.component.css']
 })
 export class NavigationBarComponent implements OnInit {
-
   configData; 
   constructor() { 
     this.configData = data; 

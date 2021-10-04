@@ -5,9 +5,12 @@ import {
   style,
   animate,
   transition,
+  useAnimation,
   // ...
 } from '@angular/animations';
 import * as data from '../config.json';
+import { fadeIn } from 'ng-animate';
+
 
 
 import { Injectable } from '@angular/core';
@@ -17,12 +20,17 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  animations:[
+    trigger('fadeIn', [transition('* => *', useAnimation(fadeIn))])
+  ]
 })
 
 
 @Injectable()
   export class ProjectsComponent {
+    fadeIn: any;
+
     githubData: any;
     githubData_names = Array();
     githubData_sorted = Array();
