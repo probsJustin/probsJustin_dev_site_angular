@@ -7,9 +7,12 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import * as data from '../config.json';
+
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -23,14 +26,17 @@ import { HttpClient } from '@angular/common/http';
     githubData: any;
     githubData_names = Array();
     githubData_sorted = Array();
-    
-      constructor(public http: HttpClient) { 
+    configData; 
 
-        
+      constructor(public http: HttpClient) { 
+        this.configData = data; 
+        console.log(this.configData);
       }
+
+      
     
       ngOnInit() { 
-        this.githubData = this.httpGet1("https://api.github.com/users/probsJustin/repos?per_page=10000");
+        this.githubData = this.http.get("https://api.github.com/users/probsJustin/repos?per_page=10000");
         console.log("yes");
         console.log(this.githubData.subscribe(
           (data: any[]) => {
@@ -56,9 +62,5 @@ import { HttpClient } from '@angular/common/http';
         }
 
       }
-      
-      httpGet1(theUrl: any)
-      {
-        return this.http.get(theUrl);
-      }
+    
     }

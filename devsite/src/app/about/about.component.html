@@ -1,1 +1,31 @@
-<p>about works!</p>
+<div class="p-2 flex-fill">
+    <div class="container-fluid">
+        <div class="col bg-light shadow p-3 mx-2 mb-3 rounded">
+            <div class="fs-2">
+                Education
+            </div>
+            <div class="fs-5">
+                {{configData["about-information"]["education"]["school"] }}
+            </div>
+            {{ configData["about-information"]["education"]["about"] }}<BR>
+            Expected Graduation Date: {{ configData["about-information"]["education"]["grad-date"] }}<BR>
+        </div>   
+        <div class="col bg-light shadow p-3 mx-2 mb-3 rounded">
+            <div class="fs-2">
+                Objectives
+            </div>
+            {{ configData["about-information"]["objectives"]["paragraph"] }}
+        </div>    
+        <div class="col bg-light shadow p-3 mx-2 mb-3 rounded">
+            <div class="fs-2">
+                Interests:
+            </div>
+
+            {{ configData["about-information"]["interests"]["1"] }} <BR>
+            {{ configData["about-information"]["interests"]["2"] }} <BR>
+            {{ configData["about-information"]["interests"]["3"] }} <BR>
+            {{ configData["about-information"]["interests"]["4"] }} <BR>
+            {{ configData["about-information"]["interests"]["5"] }} <BR>
+        </div>      
+    </div>
+</div>

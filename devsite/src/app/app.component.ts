@@ -11,4 +11,9 @@ import { Component, HostBinding } from '@angular/core';
 
 export class AppComponent {
   title = 'ProbsJustin';
+
+  constructor(){
+  }
+
+
 }

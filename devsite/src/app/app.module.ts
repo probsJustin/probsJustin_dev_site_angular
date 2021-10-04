@@ -18,7 +18,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     ContactComponent,
     AboutComponent,
     ProjectsComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
   ],
   imports: [
     BrowserModule,

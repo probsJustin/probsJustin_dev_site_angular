@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as data from '../config.json';
+
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  configData; 
+  constructor() { 
+    this.configData = data; 
+    console.log(this.configData);
+  }
 
   ngOnInit(): void {
   }
