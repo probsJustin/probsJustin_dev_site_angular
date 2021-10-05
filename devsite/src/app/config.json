@@ -10,6 +10,10 @@
         "discord" : "probsJustin#6785",
         "discord-server" : "https://discord.gg/tGJum6hkbA"
     },
+    "home-information": {
+        "purpose-of-site" : "This site's intention is to act as an example, a place for documented policy, information as well as a landing page for freelance and consultation projects",
+        "mission-statement" : "Deliver quality software and solutions in a way that the common person can understand."
+    },
     "about-information": {
         "interests" : {
             "1" : "Code injection",

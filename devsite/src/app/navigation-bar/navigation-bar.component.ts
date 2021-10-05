@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as data from '../config.json';
 
 
+
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
