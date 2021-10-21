@@ -45,5 +45,9 @@
         "github" : "https://github.com/probsJustin",
         "bitbucket" : "",
         "gitlab": ""
+    },
+    "fishing" : {
+        "title" : "Fishing Tracker",
+        "fish-brain" : ""
     }
 }
