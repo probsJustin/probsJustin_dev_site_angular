@@ -27,4 +27,4 @@ FROM nginx:latest
 COPY --from=build /usr/local/app/devsite/dist/devsite /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 8080
+EXPOSE 80
