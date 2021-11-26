@@ -32,6 +32,7 @@
     "rxjs": "~6.6.0",
     "terminal.css": "^0.7.2",
     "tslib": "^2.3.0",
+    "xterm": "^4.15.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

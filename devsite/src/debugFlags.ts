@@ -7,7 +7,7 @@ export default class debugFlags {
     constructor(){
     }
 
-    public static lookUpDebugFlag(individualFlag: any){
+    public static lookUpDebugFlagValue(individualFlag: any){
         for (const x in debugFlagsJson.flags){
             if(debugFlagsJson.flags[x] == individualFlag){
                 return debugFlagsJson.flags[x].info.value;
@@ -17,7 +17,7 @@ export default class debugFlags {
         return false; 
     }
     public static flag(individualFlag: any, message: any): void{
-        if(this.lookUpDebugFlag(individualFlag)){
+        if(this.lookUpDebugFlagValue(individualFlag)){
             console.log(message);
         }
     }
