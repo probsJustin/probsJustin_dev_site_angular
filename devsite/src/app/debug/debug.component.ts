@@ -11,7 +11,7 @@ import {
 import * as data from '../config.json';
 import { fadeIn } from 'ng-animate';
 import debugFlags from '../../debugFlags'; 
-
+import debugFlagsJson from '../../../../debugFlags.json';
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -30,10 +30,10 @@ import { Observable } from 'rxjs';
 @Injectable()
   export class DebugComponent {
     fadeIn: any;
-    configData; 
+    debugFlagsJson; 
     constructor() { 
-      this.configData = data; 
-      console.log(this.configData);
+      this.debugFlagsJson = debugFlagsJson;
+  
     }
   }
     
