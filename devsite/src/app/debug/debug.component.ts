@@ -29,7 +29,12 @@ import { Observable } from 'rxjs';
 
 @Injectable()
   export class DebugComponent {
-    
-      }
-    
+    fadeIn: any;
+    configData; 
+    constructor() { 
+      this.configData = data; 
+      console.log(this.configData);
     }
+  }
+    
+    
