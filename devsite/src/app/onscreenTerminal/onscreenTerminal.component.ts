@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as data from '../config.json';
-
-
+import 'terminal.css'
 
 @Component({
   selector: 'app-onscreenTerminal',
