@@ -15,23 +15,27 @@ import debugFlags from '../../debugFlags';
 })
 
 export class OnScreenTerminalComponent {
-  @ViewChild('myTerminal') terminalDiv: ElementRef | undefined
   configData;
   showOnScreenTerminal = true;  
-  term: Terminal; 
+  container: HTMLCollectionOf<any>; 
 
-  constructor() {   
-    this.term = new Terminal();
+  constructor() {
     this.configData = data; 
-    console.log(this.terminalDiv)
-
+    this.container = document.getElementsByClassName("line1")
+    console.log(this.container.item(0));
   }
  
+  addTextToScreen(textToAdd: any){
+    this.container.item(0).innerHTML = this.container.item(0).innerHTML + '<BR>' + textToAdd;
+  }
+
+  clearScreen(){
+    this.container.item(0).innerHTML = "";
+
+  }
   ngOnInit() {
-    if(this.terminalDiv){
-      this.term.open(this.terminalDiv.nativeElement);
-      this.term.writeln('Welcome to xterm.js');
-    }
+    this.addTextToScreen("things and such");
+    console.log(this.container.item(0).innerHTML);
   }
   
 }
