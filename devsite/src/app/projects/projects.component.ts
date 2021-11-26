@@ -10,7 +10,7 @@ import {
 } from '@angular/animations';
 import * as data from '../config.json';
 import { fadeIn } from 'ng-animate';
-
+import debugFlags from '../../debugFlags'; 
 
 
 import { Injectable } from '@angular/core';
@@ -45,7 +45,7 @@ import { Observable } from 'rxjs';
     
       ngOnInit() { 
         this.githubData = this.http.get("https://api.github.com/users/probsJustin/repos?per_page=10000");
-        console.log("yes");
+        debugFlags.flag("debugGithubOutput", this.githubData);
         console.log(this.githubData.subscribe(
           (data: any[]) => {
             this.githubData_names = data;

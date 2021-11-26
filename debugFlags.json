@@ -1,0 +1,18 @@
+{
+    "flags":[
+        {
+            "name" : "debugGithubOutput",
+            "info" : {
+                "value" : "true",
+                "description" : "output the entire github return to the cli"
+            }
+        },
+        {
+            "name" : "debugTest",
+            "info" : {
+                "value" : "true",
+                "description" : "this is just a test debug flag"
+            }
+        }
+    ]
+}

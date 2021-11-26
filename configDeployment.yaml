@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devsite
+      app: devsitegit 
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
       containers:
       - name: devsite-app
         # Replace $LOCATION with your Artifact Registry location (e.g., us-west1).
-        # Replace $GCLOUD_PROJECT with your project ID.
+        # Replace $GCLOUD_PROJECT with your project ID. 
         image: $LOCATION-docker.pkg.dev/$GCLOUD_PROJECT/hello-repo/helloworld-gke:latest
         # This app listens on port 8080 for web traffic by default.
         ports:
