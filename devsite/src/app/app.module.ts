@@ -11,7 +11,6 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { DebugComponent } from './debug/debug.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { OnScreenTerminalComponent } from './onscreenTerminal/onscreenTerminal.component';
 
 @NgModule({
   declarations: [
