@@ -2,8 +2,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ViewEncapsulation, ViewChild } from '@angular/core'
 import * as data from '../config.json';
 import debugFlags from '../../debugFlags';
-import SocketIO from 'socket.io';
-
+import { SocketioService } from '../socketio.service';
 
 @Component({
  
@@ -15,24 +14,14 @@ import SocketIO from 'socket.io';
 })
 
 export class OnScreenTerminalComponent {
-  configData;
+  configData: any;
   showOnScreenTerminal = true;  
   container: HTMLCollectionOf<any>; 
   socket: any; 
-  constructor() {
+  constructor(private socketService: SocketioService) {
     this.configData = data; 
     this.container = document.getElementsByClassName("line1")
     console.log(this.container.item(0));
-    const socket = SocketIO();
-    socket.on('connection', client=> {
-      client.on('event', data=> {
-
-      })
-      client.on('disconnect', () => {
-
-      })
-    }) 
-    socket.listen(3000);
   }
  
   addTextToScreen(textToAdd: any){
@@ -44,6 +33,8 @@ export class OnScreenTerminalComponent {
 
   }
   ngOnInit() {
+    this.socketService.setupSocketConnection();
+
     this.addTextToScreen("things and such");
     console.log(this.container.item(0).innerHTML);
   }

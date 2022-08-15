@@ -13,6 +13,13 @@
                 "value" : "true",
                 "description" : "this is just a test debug flag"
             }
+        },
+        {
+            "name" : "debugConsole",
+            "info" : {
+                "value" : "true",
+                "description" : "Output all debug info to on screen terminal"
+            }
         }
     ]
 }

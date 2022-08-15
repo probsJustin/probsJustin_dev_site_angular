@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { DebugComponent } from './debug/debug.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { OnScreenTerminalComponent } from './onscreenTerminal/onscreenTerminal.component';
+import { SocketioService } from './socketio.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { OnScreenTerminalComponent } from './onscreenTerminal/onscreenTerminal.c
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [SocketioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
