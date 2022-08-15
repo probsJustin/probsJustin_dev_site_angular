@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: probsJustin Personal Development Site
 on: [push]
 jobs:
   Explore-GitHub-Actions:
