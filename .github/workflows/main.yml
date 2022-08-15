@@ -29,10 +29,6 @@ jobs:
       working-directory: ./devsite
       run: npm install
 
-    - name: Run tests
-      working-directory: ./devsite
-      run: npm run test:headless
-
     - name: Build
       working-directory:
       run: npm run build:prod
