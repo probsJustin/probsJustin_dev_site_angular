@@ -21,8 +21,7 @@ import { OnScreenTerminalComponent } from './onscreenTerminal/onscreenTerminal.c
     AboutComponent,
     ProjectsComponent,
     DebugComponent,
-    NavigationBarComponent,
-    OnScreenTerminalComponent
+    NavigationBarComponent
     ],
   imports: [
     BrowserModule,
