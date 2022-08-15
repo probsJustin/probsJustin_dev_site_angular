@@ -22,10 +22,10 @@ jobs:
       with:
         node-version: '16'
 
+    - working-directory: ./devsite
     - run: ls -la 
     - run: pwd
-    - run: cd ./devsite
-    - run: pwd
+    
     - name: Install dependencies
       run: npm install
 
