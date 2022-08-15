@@ -22,15 +22,17 @@ jobs:
       with:
         node-version: '16'
 
-    - working-directory: ./devsite
     - run: ls -la 
     - run: pwd
-    
+
     - name: Install dependencies
+      working-directory: ./devsite
       run: npm install
 
     - name: Run tests
+      working-directory: ./devsite
       run: npm run test:headless
 
     - name: Build
+      working-directory:
       run: npm run build:prod
