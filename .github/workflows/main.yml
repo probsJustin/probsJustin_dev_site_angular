@@ -31,4 +31,4 @@ jobs:
 
     - name: Build
       working-directory: ./devsite
-      run: npm start 
+      run: npm build 
